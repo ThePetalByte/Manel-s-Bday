@@ -71,7 +71,7 @@ button {
   padding-left: 30px;
   border: 5px solid;
   border-color: #000;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background-color: #FFE6E7;
   color: #000;
   margin-top: 4rem;
@@ -172,6 +172,17 @@ font-size: 3rem;
 
 .frame3 p {
   font-size: 2rem;
+
+}
+
+.frame3 button {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 2s;
+}
+
+.frame3.fade-out {
+  animation: fadeOut 1s forwards;
 }
 
 
@@ -179,12 +190,16 @@ font-size: 3rem;
 .container {
   width: 100%;
 }
+
 .frame4 {
   display: none;
+  opacity: 0;
 }
-.frame4 .container {
 
-  background: url('assets/manel.jpg') center no-repeat;
+
+.frame4 .container {
+  position: relative;
+  background: url('assets/manel.png') center no-repeat;
   background-size: contain;
   height: 400px;
   width: calc(100% + 40px); /* Replace 40px with 2x your parent's horizontal padding */
@@ -196,3 +211,62 @@ font-size: 3rem;
     position: relative;
 }
 
+.frame4 .container .cam-frame {
+  width: 370px;
+  margin-left: 10px;
+}
+
+.container .emoji {
+  position: absolute;
+  width: 70px;
+    animation: bounce 4s ease infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px); /* move up */
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-5px); /* smaller bounce */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.frame4.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+
+.frame5 {
+  display: none;
+  opacity: 0;
+}
+
+.container .frame5 .container {
+  position: relative;
+  background-color: #FFF;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 20px;
+}
+
+.frame5 p {
+  margin: 2rem;
+  font-size: 3rem;
+}
+
+.frame5 .container .pixel-manel1 {
+  width: 133px;
+}
+.frame5 .container .pixel-manel2 {
+  width: 130px;
+}
