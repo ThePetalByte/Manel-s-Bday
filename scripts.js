@@ -10,6 +10,8 @@ const studioBtn = document.getElementById('studio-btn')
 const frame4 = document.getElementById('frame4')
 const takeBtn = document.getElementById('take-a-pic-btn')
 const frame5 = document.getElementById('frame5')
+const cakeSfx = new Audio('assets/cake.mp3')
+const cameraSfx = new Audio('assets/camera.wav')
 
 
 
@@ -41,6 +43,8 @@ yayBtn.addEventListener('click', () => {
 
 lightItBtn.addEventListener('click', () => {
     cakeImg.src="assets/lit-cake.png"
+    cakeSfx.play()
+
     lightItBtn.classList.add("fade-out");
     lightItBtn.addEventListener("animationend", () => {
         lightItBtn.style.display="none";
@@ -82,17 +86,21 @@ studioBtn.addEventListener('click', () => {
 
 
 takeBtn.addEventListener('click', () => {
-    frame4.classList.add("fade-out");
-    frame4.addEventListener("animationend", () => {
-        frame4.style.display = "none";
-
-        // Show frame2 but keep it invisible first
-        frame5.style.display = 'block';
-        frame5.style.opacity = 0;
-
-        // Force reflow so browser "sees" the opacity change
-        void frame5.offsetWidth;
-
-        // Now add fade-in class
-        frame5.classList.add("fade-in");})
+    cameraSfx.play()
+    setTimeout(() => {
+        
+        frame4.classList.add("fade-out");
+        frame4.addEventListener("animationend", () => {
+            frame4.style.display = "none";
+            
+            // Show frame2 but keep it invisible first
+            frame5.style.display = 'block';
+            frame5.style.opacity = 0;
+            
+            // Force reflow so browser "sees" the opacity change
+            void frame5.offsetWidth;
+            
+            // Now add fade-in class
+            frame5.classList.add("fade-in");})
+        }, 500);
 })

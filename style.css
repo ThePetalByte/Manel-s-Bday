@@ -7,6 +7,8 @@
   margin: 0;
   padding: 0;
   font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 
 body {
@@ -26,14 +28,16 @@ body {
 .frame1 .header {
   font-size: 4rem;
   color: #FFE6E7;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .frame1 .desc {
   margin-top: 4rem;
-  font-size: 2.2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.8rem;
   color: #FFF;
+}
+
+.frame1 .manel {
+  color: rgba(255, 0, 119, 0.889);
 }
 
 .frame1 .header,
@@ -89,6 +93,7 @@ button {
   animation-delay: 5.5s;
 }
 
+
 .fade-out {
   animation: fadeOut 1s forwards; 
 }
@@ -113,8 +118,8 @@ button {
 }
 
 .frame2 p {
-  font-size: 2rem;
-  color:#000;
+  font-size: 1.9rem;
+  color:#fff5fa;
       transform: translateY(20px);
 
 }
@@ -147,13 +152,16 @@ button {
         transform: translateY(0);
     }
 }
+.frame1.fade-out {
+  animation: fadeOut 1s forwards;
+}
 
 .frame2 #yay {
   display: none;
   opacity: 0;
   transform: translateY(20px);
       margin-top: 4rem;
-font-size: 3rem;
+font-size: 1.9rem;
 }
 
 .frame2 #yay.fade-in {
@@ -172,6 +180,7 @@ font-size: 3rem;
 
 .frame3 p {
   font-size: 2rem;
+  color: #fff5fa;
 
 }
 
@@ -194,6 +203,11 @@ font-size: 3rem;
 .frame4 {
   display: none;
   opacity: 0;
+}
+
+.frame4 h1 {
+  color: #fff5fa;
+  font-size: 2rem;
 }
 
 
@@ -252,16 +266,33 @@ font-size: 3rem;
 
 .container .frame5 .container {
   position: relative;
-  background-color: #FFF;
+  background-color: #d8cfc4;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.frame5 .container .image-frame {
+  border: 4px solid #FFF;
+  padding: 10px;
   align-items: center;
   justify-content: center;
   display: flex;
-  border-radius: 20px;
+  background-color: #FFF;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+.frame5 .ribbon {
+  width: 13rem;
+}
 .frame5 p {
   margin: 2rem;
   font-size: 3rem;
+  color:#fff5fa;
 }
 
 .frame5 .container .pixel-manel1 {
